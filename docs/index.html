@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pieter Verhoeven - Personal Portfolio</title>
+    <title>Pieter Verhoeven - PieterVerhoeven.com</title>
     <meta name="description" content="Pieter Verhoeven strategy, innovation, consulting, project management, interim management, Renewable energy, Offshore Wind, System Integration, the Netherlands, dnv, bp, shell.">
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Pieter Verhoeven - Personal Portfolio">
-    <meta property="og:description" content="Pieter Verhoeven strategy, innovation, consulting, project management, interim management, Renewable energy, Offshore Wind, Hydrogen, Storage, System Integration, the Netherlands, dnv, bp, shell.">
+    <meta property="og:title" content="Pieter Verhoeven - PieterVerhoeven.com">
+    <meta property="og:description" content="Pieter Verhoeven strategy, innovation, consulting, project management, interim management, Renewable energy, Offshore Wind, System Integration, the Netherlands, dnv, bp, shell.">
     <meta property="og:image" content="https://www.pieterverhoeven.com/images/portrait.jpg">
     <meta property="og:url" content="https://www.pieterverhoeven.com/">
     <meta property="og:type" content="website">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Pieter Verhoeven - Personal Portfolio">
+    <meta name="twitter:title" content="Pieter Verhoeven - PieterVerhoeven.com">
     <meta name="twitter:description" content="Pieter Verhoeven strategy, innovation, consulting, project management, interim management, Renewable energy, Offshore Wind, System Integration, the Netherlands, dnv, bp, shell.">
     <meta name="twitter:image" content="https://www.pieterverhoeven.com/images/portrait.jpg">
     <!-- Favicon -->
@@ -23,21 +23,39 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Pieter Verhoeven",
+      "url": "https://www.pieterverhoeven.com/",
+      "image": "https://www.pieterverhoeven.com/images/portrait.jpg",
+      "jobTitle": "Strategy, Innovation, Consulting, Project Management, Interim Management, Renewable Energy, Offshore Wind, System Integration",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "DNV, BP, Shell"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Netherlands"
+      }
+    }
+    </script>
 </head>
 <body class="min-h-screen flex flex-col font-inter antialiased bg-gray-10">
     
 <!-- Header Section -->
 <header class="bg-white shadow-sm sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16 sm:h-20">
+        <div class="flex items-center justify-between h-16 sm:h-20 md:h-40">
             <!-- Profile Section -->
             <div class="flex items-center space-x-4">
                 <!-- Portrait Photo (Circular) -->
                 <div class="relative">
                     <img 
-                        src="/images/portrait.jpg" 
+                        src="images/portrait.jpg" 
                         alt="Pieter Verhoeven portrait" 
-                        class="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-gray-200 shadow-sm"
+                        class="w-12 h-12 sm:w-16 sm:h-16 md:w-40 md:h-40 flex-shrink-0 rounded-full object-cover border-2 border-transparent shadow-sm"
                         loading="eager"
                     >
                 </div>
@@ -79,26 +97,16 @@
         <!-- Responsive Background Images -->
         <div class="absolute inset-0 z-0">
             <picture>
-                <!-- Desktop version -->
-                <source 
-                    media="(min-width: 1024px)" 
-                    srcset="/images/scenic-bg.jpg"
-                >
-                <!-- Tablet version -->
-                <source 
-                    media="(min-width: 768px)" 
-                    srcset="/images/scenic-bg-tablet.jpg"
-                >
-                <!-- Mobile version (default) -->
-                <source
-                    srcset="/images/scenic-bg-mobile@3x.jpg 3x, /images/scenic-bg-mobile@2x.jpg 2x, /images/scenic-bg-mobile.jpg 1x"
-                    media="(max-width: 767px)">
-                <img 
-                    src="/images/scenic-bg-mobile.jpg" 
-                    alt="Scenic background" 
-                    class="w-full h-full object-cover opacity-100"
-                    loading="eager"
-                >
+                <!-- Mobile WebP -->
+                <source type="image/webp" media="(max-width: 767px)" srcset="images/scenic-bg-mobile@3x.jpg.webp 3x, /images/scenic-bg-mobile@2x.jpg.webp 2x, /images/scenic-bg-mobile.jpg.webp 1x">
+                <!-- Mobile JPEG fallback -->
+                <source media="(max-width: 767px)" srcset="images/scenic-bg-mobile@3x.jpg 3x, /images/scenic-bg-mobile@2x.jpg 2x, /images/scenic-bg-mobile.jpg 1x">
+                <!-- Desktop WebP -->
+                <source type="image/webp" media="(min-width: 768px)" srcset="images/scenic-bg.webp">
+                <!-- Desktop JPEG fallback -->
+                <source media="(min-width: 768px)" srcset="/images/scenic-bg.jpg">
+                <!-- Fallback image -->
+                <img src="/images/scenic-bg.jpg" alt="Scenic background" class="w-full h-full object-cover opacity-100" loading="eager">
             </picture>
             <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-40 rounded px-2 py-1 text-xs text-white text-center pointer-events-none select-none">
                 <span class="text-blue-200">© 2025</span> 📌Lysefjord Norway
@@ -108,7 +116,13 @@
 </main><!-- Footer Section -->
 <footer class="w-full py-4 bg-white border-t border-transparent">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p class="text-center text-xs text-gray-400 sm:text-sm sm:text-gray-600">made with love</p>
+        <p class="text-center text-xs text-gray-400 sm:text-sm sm:text-gray-600">
+            Made with <span aria-label="love" title="love">❤️</span>,
+            <a href="https://www.11ty.dev/" target="_blank" rel="noopener noreferrer" class="underline hover:text-blue-500">11TY</a>
+            and <a href="https://cursor.so/" target="_blank" rel="noopener noreferrer" class="underline hover:text-blue-500">Cursor.ai</a>
+            <span aria-label="robot" title="Cursor AI">🤖</span>
+            on a sunny day <span aria-label="sun" title="sun">☀️</span>
+        </p>
     </div>
 </footer>
 
