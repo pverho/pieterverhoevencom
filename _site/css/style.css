@@ -1,0 +1,54 @@
+/* Custom styles to enhance Tailwind CSS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #4f46e5;
+  --secondary-color: #6b7280;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom portrait photo styles */
+.portrait-photo {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portrait-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Background image optimization */
+.bg-scenic {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Mobile-first responsive adjustments */
+@media (max-width: 640px) {
+  .bg-scenic {
+    background-attachment: scroll; /* Better performance on mobile */
+  }
+}
+
+/* Accessibility improvements */
+.focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

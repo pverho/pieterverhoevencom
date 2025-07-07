@@ -1,0 +1,16 @@
+{
+  "name": "pieterverhoevencom",
+  "version": "1.0.0",
+  "description": "Personal portfolio website for Pieter Verhoeven",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+    "start": "npm run serve"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
